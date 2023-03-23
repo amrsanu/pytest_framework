@@ -30,7 +30,11 @@
     - pytest -m <marker_name> #To run the specified marker tests
     - pytest -m "<marker1> and/or <marker2>" #To run the multiple marker tests
     - pytest -m "not <marker_name>" #To run all the tests that are not marked with <marker_name>
-
   - It will run all the test suites decorated using the specified marker.
   - This is auto managing of the test suites.
   - Can define multiple markers for the functions and it kind of groups the test suites under same name.
+
+  - Grouping same markers under a class to eliminate the need to specify the markers for every test function
+    - Mark the class with the marker decorator, All the test function inside the class will be added to that marker group.
+    - No need to put the same decorator for similar test functions, group them in a same function
+    - Classes can also have multiple markers.

@@ -20,7 +20,6 @@
   - Its not a good idea to manage test manually.
 - Try to organise the tests in directories > files > classes > functions. 
 
-
 ## Documentation
 
 - Markers
@@ -38,3 +37,28 @@
     - Mark the class with the marker decorator, All the test function inside the class will be added to that marker group.
     - No need to put the same decorator for similar test functions, group them in a same function
     - Classes can also have multiple markers.
+
+## Fixtures
+
+- About
+
+  - Functions used to manage the apps state and dependencies. They provide data for testing and wide range of value types when explicitly called.
+  - Runs before/after each test function to which it is applied
+
+- Usage
+  - -v: To run in verbose mode
+  - -m: To specify the marker
+  - -s: To display the prints in the console
+
+- Features
+
+  - Create a python file "conftest.py" to define all the fixtures, pytest will snoop all the fixture
+  - No need to inport the fixtures in the modules,
+  - Fixtures created in "conftest.py" is accessible to same directory/file and recursive inner firectories/files
+  - It will handle the teardown on its own
+    - Use yield to return the instance to the calling function.
+    - Any statement after the yield will be a teardown
+  - Scope
+    - function: Every function will get 1 instance
+    - session: The complete session will get only one instance
+

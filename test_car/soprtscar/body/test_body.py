@@ -28,3 +28,8 @@ class TestBody:
     def test_body_back_light(self):
         """To test the back_light"""
         assert True
+
+    @mark.ui
+    def test_get_car_name(self, available_cars):
+        """To test the back_light"""
+        assert "Bumblebee" in available_cars

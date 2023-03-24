@@ -87,3 +87,8 @@
 - Uses marker, @mark.xfail(reason="")
 - Commands argument to get the Skip prints
   - pytest --env qa -v -rx
+
+## Parametrization
+
+- Running the same test with multiple inputs without duplicating the test functions
+- Uses marker: pytest.mark.parametrize()

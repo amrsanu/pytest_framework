@@ -74,3 +74,16 @@
 - Requirements
   - pip install pytest-html
 
+## Handling Test Skips
+
+- To skip the test functions
+- Uses marker, @mark.skip(reason="")
+- Commands argument to get the Skip prints
+  - pytest --env qa -v -rs
+
+## HAndling Expected Test Failures
+
+- To specify the failing test functions that it will fail
+- Uses marker, @mark.xfail(reason="")
+- Commands argument to get the Skip prints
+  - pytest --env qa -v -rx

@@ -59,6 +59,18 @@
     - Use yield to return the instance to the calling function.
     - Any statement after the yield will be a teardown
   - Scope
-    - function: Every function will get 1 instance
+    - package: 
+    - module: 
+    - class: 
+    - function[default]: Every function will get 1 instance
     - session: The complete session will get only one instance
+
+## Reporting
+
+- Generates a document with the details of the run.
+  - pytest --html="<html_file_path>", Generates a html document
+  - pytest --junitxml="results.xml", Generates a xml document with the details, can be used as plugin in the cloud pipelines like Jenkins.
+
+- Requirements
+  - pip install pytest-html
 

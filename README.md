@@ -26,9 +26,21 @@
   - Use mark from pytest to enable selecting a set of test suites to run
   - Define marker using: @mark.<marker_name>
   - Command:
+    - pytest
     - pytest -m <marker_name> #To run the specified marker tests
     - pytest -m "<marker1> and/or <marker2>" #To run the multiple marker tests
     - pytest -m "not <marker_name>" #To run all the tests that are not marked with <marker_name>
+    - pytest -x To stop execution at first failure
+    - pytest -x
+    - pytest -x
+    - pytest -x
+    - pytest -x
+    - pytest -s -v -n <number_of_threads>
+      - [n] To run using 'pytest-xdist' - Uses parallel execution to run the test functions
+      - [s] To show the output of prints to console
+      - [v] To run in verbose mode
+    - tox To run using the TOX configuration
+
   - It will run all the test suites decorated using the specified marker.
   - This is auto managing of the test suites.
   - Can define multiple markers for the functions and it kind of groups the test suites under same name.

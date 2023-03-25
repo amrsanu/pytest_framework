@@ -139,3 +139,11 @@
   - Configure tox.ini file with the configuration
 
 - TOX will create the new venv for mentioned venv and installs deps. Runs the command provided.
+- Can define the pytest.ini configurations in the tox.ini itself.
+
+## Functional Test - Black/Gray Box Testing
+
+- This is not exactly related to any python library (that needs to be tested)
+- It runs literally
+- Doesnot worry about the logic of the code
+- Just verifies the final output for the project as a whole for differnet scenarios.

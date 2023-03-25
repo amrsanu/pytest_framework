@@ -92,3 +92,10 @@
 
 - Running the same test with multiple inputs without duplicating the test functions
 - Uses marker: pytest.mark.parametrize()
+- Using marker parametrization will also be repetitive if you need the same set of data for some other testing function
+- Better to use a fixture with 'params'
+  - It will run the test function decorated with that fixture for all the params once.
+
+## Fase Testing with Pytest-xdist
+
+## Parallel vs Concurrent

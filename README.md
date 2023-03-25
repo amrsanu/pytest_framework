@@ -98,4 +98,19 @@
 
 ## Fase Testing with Pytest-xdist
 
+- Requirement:
+  - pip install pytest-xdist
+
+- Command:
+  - pytest -s -v -n <#threads>
+  - or
+  - pytest -s -v -n auto
+  - -n is for number of threads to use to run the test. With 'auto' pytest will try to comup with a optimized number of threads dynamically.
+- Will parallelize rhe tests using n threads.
+- Good idea is to keep the value of n below the total number of test functions.
+  - Don't use huge number of threads, there is a overhead to create and synchronize the threads.
+  
 ## Parallel vs Concurrent
+
+- Normally the tests will not run parallely, they maybe running concurrently by interupting one another.
+- To get parallelization we can use 'pytest-xdist' with -n argument
